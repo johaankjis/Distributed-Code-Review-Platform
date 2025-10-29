@@ -1,0 +1,40 @@
+source 'https://rubygems.org'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
+ruby '3.2.0'
+
+# Core Rails
+gem 'rails', '~> 7.1.0'
+gem 'pg', '~> 1.5'
+gem 'puma', '~> 6.0'
+
+# API
+gem 'rack-cors'
+gem 'jbuilder'
+
+# Authentication
+gem 'jwt'
+gem 'bcrypt', '~> 3.1.7'
+
+# GitHub Integration
+gem 'octokit', '~> 6.0'
+gem 'faraday-retry'
+
+# Background Jobs
+gem 'sidekiq', '~> 7.0'
+gem 'redis', '~> 5.0'
+
+# Utilities
+gem 'dotenv-rails'
+gem 'httparty'
+
+group :development, :test do
+  gem 'debug'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'faker'
+end
+
+group :development do
+  gem 'annotate'
+end
